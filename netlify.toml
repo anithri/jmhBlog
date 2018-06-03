@@ -5,13 +5,13 @@
   command = "gatsby build"
 
 [context.production]
-  command = 'echo context.production'
+  command = "gatsby build"
 
 [context.production.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
 
 [context.branch-deploy]
-  command = "echo branch"
+  command = "gatsby build"
 
 # Dev. Testing. experiments, feedback
 [context.dev]
@@ -22,7 +22,7 @@
 
 # Staging.  Final checks before going live
 [context.staging]
-  command = 'echo context.staging'
+  command = "gatsby build"
 
 [context.staging.environment] # 'staging' is a branch name
   CONTENTFUL_URL = 'preview.contentful.com'
