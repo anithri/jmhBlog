@@ -65,56 +65,56 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           return { pages, posts }
         }) // extract data from
-        // .then(result => {
-        //   result.pages.forEach(page => {
-        //
-        //     createPage({
-        //       path: page.slug,
-        //       component: page.template,
-        //       context: {
-        //         contentful_id: page.contentful_id,
-        //       },
-        //     })
-        //     createPage({
-        //       path: page.slugHtml,
-        //       component: page.template,
-        //       context: {
-        //         contentful_id: page.contentful_id,
-        //       },
-        //     })
-        //   })
-        //   return result
-        // }) // generate pages
-        // .then(result => {
-        //   result.posts.forEach(post => {
-        //     createPage({
-        //       path: post.path,
-        //       component: post.template,
-        //       context: {
-        //         contentful_id: post.contentful_id,
-        //       },
-        //     })
-        //   })
-        //
-        //   return result
-        // }) // generate posts
-        // .then(result => {
-        //   const byDate = {
-        //       ..._groupBy(result.posts, (p => p.dateStamp.year())),
-        //       ..._groupBy(result.posts, (p => p.dateStamp.format('YYYY-MM')))
-        //   }
-        //   Object.entries(([group, posts]) => {
-        //     createPage({
-        //       path: Slug.post('index', moment(group)),
-        //       component: post.template,
-        //       context: {
-        //         contentful_id: post.contentful_id,
-        //       },
-        //     })
-        //   })
-        //
-        //   return result
-        // }) // generate post indicies
+        .then(result => {
+          result.pages.forEach(page => {
+
+            createPage({
+              path: page.slug,
+              component: page.template,
+              context: {
+                contentful_id: page.contentful_id,
+              },
+            })
+            createPage({
+              path: page.slugHtml,
+              component: page.template,
+              context: {
+                contentful_id: page.contentful_id,
+              },
+            })
+          })
+          return result
+        }) // generate pages
+        .then(result => {
+          result.posts.forEach(post => {
+            createPage({
+              path: post.path,
+              component: post.template,
+              context: {
+                contentful_id: post.contentful_id,
+              },
+            })
+          })
+
+          return result
+        }) // generate posts
+        .then(result => {
+          const byDate = {
+              ..._groupBy(result.posts, (p => p.dateStamp.year())),
+              ..._groupBy(result.posts, (p => p.dateStamp.format('YYYY-MM')))
+          }
+          Object.entries(([group, posts]) => {
+            createPage({
+              path: Slug.post('index', moment(group)),
+              component: post.template,
+              context: {
+                contentful_id: post.contentful_id,
+              },
+            })
+          })
+
+          return result
+        }) // generate post indicies
 
       //   //
       //   // // TODO Write Blog indices for

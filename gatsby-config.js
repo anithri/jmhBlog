@@ -8,9 +8,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     {
-      resolve: 'gatsby-plugin-feed-generator'
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.DAD_SPACE_ID,
