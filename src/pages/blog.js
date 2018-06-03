@@ -2,13 +2,15 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PostHome from '../components/posts/Home'
 import PropTypes from 'prop-types'
-import postContainer, {contentfulPostShape} from '../containers/post'
-import pageContainer, {contentfulPageShape} from '../containers/page'
+import postContainer, { contentfulPostShape } from '../containers/post'
+import pageContainer, { contentfulPageShape } from '../containers/page'
 
 class BlogHomePage extends React.Component {
   render() {
-    const {data: {allContentfulPost,contentfulPage}} = this.props
-    const posts = allContentfulPost.posts.map(({post}) => postContainer(post))
+    const {
+      data: { contentfulPage, allContentfulPost },
+    } = this.props
+    const posts = allContentfulPost.posts.map(({ post }) => postContainer(post))
     const page = pageContainer(contentfulPage)
 
     return (
@@ -19,6 +21,12 @@ class BlogHomePage extends React.Component {
   }
 }
 
+BlogHomePage.propTypes = {
+  contentfulPage: contentfulPageShape,
+  allContentfulPost: PropTypes.shape({
+    posts: PropTypes.arrayOf(PropTypes.shape({ post: contentfulPostShape })),
+  }),
+}
 export default BlogHomePage
 
 // BlogHomePage.propTypes = {
@@ -30,7 +38,7 @@ export default BlogHomePage
 
 export const BlogHomePageQuery = graphql`
   query BlogHomePageQuery {
-    contentfulPage(slug: {eq: "writings" }) {
+    contentfulPage(slug: { eq: "blog" }) {
       ...commonPageFragment
     }
     allContentfulPost(

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import SummaryList from './SummaryList'
 import { pageShape } from '../../containers/page'
 import { postShape } from '../../containers/post'
+import {childShape} from '../../containers/other'
 
 const PostHome = ({ children, className, page, posts }) => {
   return (
@@ -20,12 +21,7 @@ PostHome.propTypes = {
   className: PropTypes.string,
   page: pageShape.isRequired,
   posts: PropTypes.arrayOf(postShape).isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.func),
-    PropTypes.arrayOf(PropTypes.node),
-  ]),
+  children: childShape
 }
 
 PostHome.defaultProps = {
