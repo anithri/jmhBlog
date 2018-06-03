@@ -2,12 +2,17 @@
 # ID = "39805795-46cd-4c33-a281-4fe43ba85b43"
 [build]
   publish = "public/"
-
+  command = "gatsby build"
+[context.production]
+  command = 'echo context.production'
 [context.production.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
-
+[context.staging]
+  command = 'echo context.staging'
 [context.staging.environment] # 'staging' is a branch name
   CONTENTFUL_URL = 'preview.contentful.com'
-
+[context.dev]
+  command = 'echo context.dev'
 [context.dev.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
+
