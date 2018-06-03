@@ -3,12 +3,11 @@
 [build]
   publish = "public/"
 
-[context.production]
+[context.production.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
 
-[context.staging] # 'staging' is a branch name
+[context.staging.environment] # 'staging' is a branch name
   CONTENTFUL_URL = 'preview.contentful.com'
 
-[context.dev]
+[context.dev.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
-
