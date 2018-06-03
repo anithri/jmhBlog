@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import postContainer, {contentfulPostShape} from '../containers/post'
 import pageContainer, {contentfulPageShape} from '../containers/page'
 
-class WritingsHomePage extends React.Component {
+class BlogHomePage extends React.Component {
   render() {
     const {data: {allContentfulPost,contentfulPage}} = this.props
     const posts = allContentfulPost.posts.map(({post}) => postContainer(post))
@@ -19,17 +19,17 @@ class WritingsHomePage extends React.Component {
   }
 }
 
-export default WritingsHomePage
+export default BlogHomePage
 
-// WritingsHomePage.propTypes = {
+// BlogHomePage.propTypes = {
 //   data: {
 //     contentfulPage: contentfulPageShape,
 //     allContentfulPost: PropTypes.arrayOf(contentfulPostShape)
 //   }
 // }
 
-export const WritingsHomePageQuery = graphql`
-  query WritingsHomePageQuery {
+export const BlogHomePageQuery = graphql`
+  query BlogHomePageQuery {
     contentfulPage(slug: {eq: "writings" }) {
       ...commonPageFragment
     }
