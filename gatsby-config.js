@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Believing the Bird',
+    title: 'The Art of Joe M Horvath',
     homeUrl: '/',
     host: 'localhost:8000'
   },

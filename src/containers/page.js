@@ -23,7 +23,6 @@ export const contentfulPageShape = PropTypes.shape({
 })
 
 const pageContainer = (page) => {
-  console.log(page.images)
   const images = page.images ? page.images.map(i => imageContainer(i)) : []
   const body = page.body.childMarkdownRemark.html
   return {

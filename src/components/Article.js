@@ -4,7 +4,6 @@ import {postShape} from '../containers/post'
 import {pageShape} from '../containers/page'
 import Img from 'gatsby-image'
 const Article = ({ children, className, subject }) => {
-  console.log('Article', subject)
   const { body, timeStamp, dateStamp, publishDate, title, images } = subject
   let timeHeader
 
