@@ -15,7 +15,7 @@
 
 # Dev. Testing. experiments, feedback
 [context.dev]
-  command = 'echo context.dev'
+  command = "gatsby build"
 
 [context.dev.environment]
   CONTENTFUL_URL = 'cdn.contentful.com'
