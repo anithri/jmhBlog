@@ -1,0 +1,13 @@
+# [Settings]
+# ID = "39805795-46cd-4c33-a281-4fe43ba85b43"
+
+[build]
+  publish = "public/"
+  command = "gastby build --no-color"
+
+[context.staging] # 'staging' is a branch name
+  base = "staging"
+
+[context.dev]
+  base = "dev"
+
