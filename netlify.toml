@@ -1,13 +1,14 @@
 # [Settings]
 # ID = "39805795-46cd-4c33-a281-4fe43ba85b43"
-
 [build]
   publish = "public/"
-  command = "gastby build --no-color"
+
+[context.production]
+  CONTENTFUL_URL = 'cdn.contentful.com'
 
 [context.staging] # 'staging' is a branch name
-  base = "staging"
+  CONTENTFUL_URL = 'preview.contentful.com'
 
 [context.dev]
-  base = "dev"
+  CONTENTFUL_URL = 'cdn.contentful.com'
 
