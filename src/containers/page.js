@@ -42,7 +42,7 @@ export const commonPageFragment = graphql`
     images {
       title
       sizes(maxWidth: 1280) {
-        ...GatsbyContentfulSizes
+        ...GatsbyContentfulSizes_noBase64
       }
     }
     slug
