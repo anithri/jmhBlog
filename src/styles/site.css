@@ -22,13 +22,13 @@ body,
 }
 
 body {
-  background-color: var(--color-body-bg);
 }
 
 #___gatsby {
-  background-image: url('../images/lace-background.png');
-  background-position: bottom right;
-  background-size: cover;
+  background-color: var(--base-background-color);
+  background-image: var(--body-background-texture);
+  background-repeat: repeat;
+
 }
 
 .quote {

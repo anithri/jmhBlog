@@ -16,14 +16,13 @@ const Spacer = ({ idx }) => {
 const Nav = ({ pages, className }) => {
   const links = _flatten(
     pages.map(({ linkName, slug }, idx) => {
-      return [
-        <Spacer idx={idx} key={`pageNavSpacer>${idx}`} />,
+      return (
         <li key={`pageNav-${slug}-${idx}`}>
           <Link to={`/${slug}`} activeClassName={'currentPage'}>
             {linkName}
           </Link>
-        </li>,
-      ]
+        </li>
+      )
     })
   )
   return (
@@ -35,10 +34,12 @@ const Nav = ({ pages, className }) => {
 
 Nav.propTypes = {
   className: PropTypes.string,
-  pages: PropTypes.arrayOf(PropTypes.shape({
-    linkName: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-  }))
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      linkName: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 Nav.defaultProps = {

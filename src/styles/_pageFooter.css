@@ -1,0 +1,44 @@
+.pageGrid > footer {
+  background-color: var(--color-reading-bg); /* .bg-white-50 */
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  border: 1px solid;
+  border-image: linear-gradient(to left, transparent 0%, var(--base-border-color) 100%);
+  border-image-slice: 1;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+
+  & > span {
+    font-style: italic; /* .i */
+    font-size: var(--font-size-6); /* .f6 */
+
+    display: inline-block;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+}
+
+
+footer.page {
+  text-align: center;
+  @extend .mt1;
+  @extend .f2;
+
+  border: 1px solid;
+  border-image-slice: 1;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+
+  p {
+    @extend .f6;
+    line-height: 1;
+  }
+}

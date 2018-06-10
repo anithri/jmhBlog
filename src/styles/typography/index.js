@@ -1,5 +1,5 @@
 import Typography from 'typography'
-import theme from 'typography-theme-lincoln'
+import theme from './jmh-theme'
 
 theme.includeNormalize = false
 theme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
@@ -12,3 +12,4 @@ theme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
 const typography = new Typography(theme)
 
 export default typography
+

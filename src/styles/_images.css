@@ -1,0 +1,44 @@
+.featuredImage {
+  img {
+      filter: opacity(20%);
+      transition: filter 0.25s ease-in-out;
+    position:relative;
+    z-index:-1;
+    display:block;
+    width:640px;
+
+  }
+  &:hover {
+    z-index: 30;
+    img {
+      transition: filter 0.75s ease-in-out;
+      filter: opacity(100%);
+      z-index: 30;
+    }
+    .wrapper {
+      background-color: var(--white-10);
+      color: var(--near-black);
+    }
+  }
+}
+
+.wrapper {
+  transition-property: width, color, background-color;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-in-out;
+  float: right;
+  text-align: justify;
+//z-index: 9999;
+}
+
+
+.fadeOut:hover + .blogPage {
+  main {
+  //width: 66%;
+  }
+  p {
+  //background-color: $white-30;
+  //color: $near-black;
+  }
+}
+

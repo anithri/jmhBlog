@@ -17,16 +17,28 @@ page background 193,226,247
 
 
 */
-
-@custom-media --breakpoint-not-small screen and (min-width: 30em);
-@custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);
-@custom-media --breakpoint-large screen and (min-width: 60em);
+@custom-media --breakpoint-small screen and (max-width: 30em);
+@custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 40em);
+@custom-media --breakpoint-large screen and (min-width: 40em);
 
 /* colors can be found in ./_pallete.css */
 :root {
-  --font-size-base: 16pt;
+  --font-size-base: 1.25rem;
 
-  --page-width: var(--measure-wide);
+  --page-width: 40rem;
+
+  --breakpoint-small: 'screen and (max-width: 640px)';
+  --base-color: #b4aa7a;
+  --base-background-color: #b4aa7a40;
+  --base-font-color: #663300; /* duplicate in typography/jmh-theme */
+  --secondary-background-color: #ffe2b3;
+  --base-border-color: #66330044;
+  
+  --header-max-height: 3.25em;
+  --header-border-width: 2px;
+  --body-max-width: 1180px;
+  --body-background-texture: url("../images/subtle_white_feathers_@2X-alpha-mask.png");
+
 
 }
 

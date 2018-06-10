@@ -24,7 +24,7 @@ const Layout = ({children, data}) => {
       />
       <Header className="pageHeader" {...{ title, homeUrl, host }} />
       <Nav className="pageNav" {...{ pages }} />
-      <main className="pageContent">{children()}</main>
+      {children()}
       <Footer className="pageFooter" />
     </section>
   )
