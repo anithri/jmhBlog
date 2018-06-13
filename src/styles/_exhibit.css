@@ -1,0 +1,36 @@
+.exhibit {
+  & .carousel .slide {
+    background-color: var(--transparent); /* .bg-transparent */
+  }
+
+  & .image-gallery-left-nav,
+  & .image-gallery-right-nav {
+    height: 100%; /* .h-100 */
+  }
+
+  & .image-gallery-fullscreen-button,
+  & .image-gallery-play-button {
+    bottom: var(--spacing-medium);
+    z-index: 20;
+    &::before {
+      color: var(--base-font-color);
+    }
+  }
+
+  & .image-gallery-slide {
+    background-color: var(--transparent); /* .bg-transparent */
+  }
+}
+
+.imageFigure {
+  object-fit: cover;
+  & > figcaption {
+    padding-top: var(--spacing-extra-extra-small); /* .pt1 */
+
+    text-align: center; /* .tc */
+    line-height: var(--line-height-title); /* .lh-title */
+
+    font-size: var(--font-size-3); /* .f4 */
+  }
+}
+

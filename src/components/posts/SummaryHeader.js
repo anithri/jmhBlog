@@ -5,18 +5,16 @@ import Slug from '../../utils/Slug'
 import { postShape } from '../../containers/post'
 
 export const SummaryHeader = props => {
-  const { post} = props
-  const {
-    dateStamp,
-    publishDate,
-    title,
-  } = post
+  const { post } = props
+  const { dateStamp, publishDate, title } = post
   return (
     <header className="postSummaryHeader">
-      <time dateTime={dateStamp.format()}>
-        <span>{dateStamp.format('MMM D, YYYY')}</span>
-      </time>
-      <h3>{title}</h3>
+      <h3>
+        {title}
+        <time dateTime={dateStamp.format()}>
+          <span>{publishDate}</span>
+        </time>
+      </h3>
     </header>
   )
 }

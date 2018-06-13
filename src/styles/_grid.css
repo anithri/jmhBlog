@@ -15,7 +15,7 @@
   }
 
   & > article {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   & > footer {
@@ -25,7 +25,7 @@
 @media (--breakpoint-small) {
   .pageGrid {
     width: 100%; /* .w-100 */
-    grid-template-rows: auto auto 1fr 1fr auto
+    grid-template-rows: auto auto 1fr 1fr auto;
   }
 
   .pageGrid > header {
@@ -37,7 +37,8 @@
   .pageGrid > aside {
     grid-row: 3;
   }
-  .pageGrid > article {
+  .pageGrid > article,
+  .pageGrid > .postHome {
     grid-row: 4;
   }
   .pageGrid > footer {
@@ -48,7 +49,7 @@
 @media (--breakpoint-medium) {
   .pageGrid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2rem 1.5rem calc((100vh - 6.5rem) / 10) calc((100vh - 6.5rem) * 9 / 10) 3rem;
+    grid-template-rows: 2rem 1.5rem calc((100vh - 6.5rem) / 10) 3rem;
   }
   .pageGrid > * {
     grid-column: 1 / span 3;
@@ -63,7 +64,8 @@
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  .pageGrid > article {
+  .pageGrid > article,
+  .pageGrid > main {
     grid-column: 2 / span 2;
     grid-row: 3;
   }
@@ -76,7 +78,7 @@
   .pageGrid {
     max-width: var(--page-width);
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2rem 1.5rem repeat(2, calc((100vh - 6.5rem) / 2)) 3rem;
+    grid-template-rows: 2rem 1.5rem 2rem calc(100vh - 8.5rem) 3rem;
   }
   .pageGrid > * {
     grid-column: 1 / span 3;
@@ -88,18 +90,28 @@
     grid-row: 2;
   }
   .pageGrid > aside {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1 / span 2;
     align-self: start;
   }
   .pageGrid > article {
     grid-column: 2 / span 2;
     grid-row: 4;
-    align-self: end;
+    align-self: center;
+  }
+
+  .pageGrid > main {
+    grid-column: 2 / span 2;
+    grid-row: 4;
+    align-self: start;
   }
   .pageGrid > footer {
     grid-row: 5;
   }
+
+  .pageGrid > .pageGallery {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    max-height: calc(100vh - 8.5rem);
+  }
 }
-
-

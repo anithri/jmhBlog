@@ -18,7 +18,7 @@ const Article = ({ children, className, subject }) => {
     timeHeader = <time dateTime={dateStamp.format()}>{publishDate}</time>
   }
   return [
-    <aside>
+    <aside key="articleExhibit" className={"fadeOut"}>
       <Exhibit
         key="ArticleExhibit"
         images={images}

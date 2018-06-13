@@ -39,7 +39,7 @@ const contentfulPost = (post) => {
     body: post.body.childMarkdownRemark.html,
     dateStamp,
     images,
-    publishDate: dateStamp.format('LL'),
+    publishDate: dateStamp.format('MMM D'),
     slugPath: Slug.post(post.slug,dateStamp),
     summary: post.body.childMarkdownRemark.excerpt,
   }
@@ -55,9 +55,9 @@ export const commonPostFragment = graphql`
     }
     images {
       title
+      description
       sizes(maxWidth: 1280) {
         ...GatsbyContentfulSizes_noBase64
-        
       }
     }
     publishOn

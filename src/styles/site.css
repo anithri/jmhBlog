@@ -1,13 +1,17 @@
 @import 'tachyons.css';
 
-@import '__variables.css';
+@import '_typography.css';
 @import '__colors.css';
+@import '__variables.css';
 
 @import '_grid.css';
+@import '_images.css';
+@import '_pageFooter.css';
 @import '_pageHeader.css';
 @import '_pageNav.css';
-@import '_typography.css';
 
+@import '_posts.css';
+@import '_exhibit.css';
 /*@import './tachyons/_debug.css';*/
 
 html,
@@ -54,19 +58,17 @@ h3 {
   font-style: italic; /* .i */
   font-size: var(--font-size-3); /* .f3 */
   font-weight: 500; /* .fw6 */
-  color: var(--dark-green); /* .dark-green */
-
 }
-p:first-child:first-letter {
+
+/* p:first-child:first-letter {
   float: left;
   font-size: 3rem;
   line-height: 60px;
-  padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
-  color: var(--dark-green); /* .dark-green */
+  font-family: 'Cormorant Garamond', serif;
+} */
 
-}
 ul {
   margin-top: var(--spacing-small); /* .mt2 */
 
@@ -77,11 +79,6 @@ ul {
     margin: var(--spacing-none); /* .ma0 */
     margin-bottom: var(--spacing-medium); /* .mb3 */
   }
-}
-
-time {
-  font-weight: bold; /* .b */
-
 }
 
 .postSummary {

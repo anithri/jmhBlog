@@ -9,7 +9,7 @@ const theme = {
   googleFonts: [
     {
       name: 'Cormorant Garamond',
-      styles: ['500'],
+      styles: ['400'],
     },
     {
       name: 'Libre Franklin',

@@ -3,22 +3,24 @@ import uuidv4 from 'uuid/v4'
 import PropTypes from 'prop-types'
 import { imageShape } from '../containers/image'
 import { childShape } from '../containers/other'
-// import { Carousel } from 'react-responsive-carousel'
 import FeaturedImage from './FeaturedImage'
+import Gallery from '../components/Gallery'
 
 const Exhibit = ({ className, images, limit, emptyExhibit = null }) => {
   if (limit === 0 || images.length === 0) return emptyExhibit
-  if (limit > 0 || images.length > 0) {
+  if (limit === 1 || images.length === 1) {
     return <FeaturedImage image={images[0]} />
   }
 
   const imageCount = limit < 0 || limit > images.length ? images.length : limit
 
-  const figures = images.slice(0, imageCount).map(image => (
-    <Image key={uuidv4()} image={image} className={`$className galleryImage`} />
-  ))
+  // const figures = images.slice(0, imageCount).map(image => (
 
-  return (<aside><ul>{figures}</ul></aside>)
+  return (
+    <aside className={'exhibit'}>
+      <Gallery items={images.slice(0, imageCount)} />
+    </aside>
+  )
 }
 
 Exhibit.propTypes = {

@@ -41,6 +41,7 @@ export const commonPageFragment = graphql`
     }
     images {
       title
+      description
       sizes(maxWidth: 1280) {
         ...GatsbyContentfulSizes_noBase64
       }

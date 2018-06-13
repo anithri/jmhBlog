@@ -3,17 +3,24 @@ import PropTypes from 'prop-types'
 import SummaryList from './SummaryList'
 import { pageShape } from '../../containers/page'
 import { postShape } from '../../containers/post'
+import Exhibit from '../Exhibit'
 
 const PostHome = ({ children, className, page, posts }) => {
-  return (
-    <section className={`${className} postHome`}>
+  return [
+    <aside key={'postHomeExhibit'} className="fadeOut">
+      <Exhibit
+        className={'fadeout'}
+        images={page.images}
+      />
+    </aside>,
+    <main key="postHome" className={`${className} postHome`}>
       <header>
         <h2>{page.title}</h2>
       </header>
       <SummaryList posts={posts} />
       {children}
-    </section>
-  )
+    </main>,
+  ]
 }
 
 PostHome.propTypes = {

@@ -1,5 +1,4 @@
 .pageGrid > footer {
-  background-color: var(--color-reading-bg); /* .bg-white-50 */
 
   display: flex;
   flex-direction: column;
@@ -17,7 +16,6 @@
 
   & > span {
     font-style: italic; /* .i */
-    font-size: var(--font-size-6); /* .f6 */
 
     display: inline-block;
     flex: 0 1 auto;
@@ -26,8 +24,11 @@
 }
 
 
-footer.page {
+footer {
   text-align: center;
+  margin-top: var(--spacing-extra-small); /* .mt1 */
+  font-size: var(--font-size-7); /* .f2 */
+
   @extend .mt1;
   @extend .f2;
 

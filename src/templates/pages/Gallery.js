@@ -1,15 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Gallery from '../../components/Article'
+import Exhibit from '../../components/Exhibit'
 import PropTypes from 'prop-types'
 import pageContainer, {contentfulPageShape} from '../../containers/page';
 
 const PageGallery = ({ data: { contentfulPage } }) => {
   const page = pageContainer(contentfulPage)
   return (
-    <Gallery subject={page} className={`pageArticle ${page.theme} ${page.slug}Page`}>
+    <main className={`pageGallery ${page.theme} ${page.slug}Page`}>
+      <Exhibit images={page.images}/>
       <Helmet title={page.title} />
-    </Gallery>
+    </main>
   )
 }
 
