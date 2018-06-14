@@ -24,3 +24,8 @@ blockquote {
   font-style: italic;
 }
 
+article section:hover {
+  color: var(--base-font-hover-color); /* .near-black */
+  transition: color .5s ease-in-out;
+}
+

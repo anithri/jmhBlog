@@ -31,6 +31,7 @@ page background 193,226,247
   --base-color: #b4aa7a;
   --base-background-color: #b4aa7a40;
   --base-font-color: #663300; /* duplicate in typography/jmh-theme */
+  --base-font-hover-color: #221100;
   --secondary-background-color: #ffe2b3;
   --base-border-color: #66330044;
   

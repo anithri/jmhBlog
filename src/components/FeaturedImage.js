@@ -4,7 +4,7 @@ import Image from './Image'
 
 const FeaturedImage = ({className, image}) => {
   return (
-    <Image {...image} className={`featuredImage ${className}`} />
+    <Image {...image} title={''} className={`featuredImage ${className}`} />
   )
 }
 

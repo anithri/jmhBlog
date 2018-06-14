@@ -8,7 +8,7 @@ const Index = ({data: {contentfulPage}}) => {
   const page = pageContainer(contentfulPage)
 
   return (
-    <Article className={`homePage ${page.theme}`} subject={page}>
+    <Article className={`homePage ${page.theme}`} subject={{...page, title: ''}}>
       <Helmet title={page.title} />
     </Article>
   )
