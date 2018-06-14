@@ -4,7 +4,7 @@ import verticalRhythm from 'compass-vertical-rhythm'
 
 const theme = {
   title: 'JMH Theme',
-  baseFontSize: '1.25rem',
+  baseFontSize: '19px',
   baseLineHeight: '1.5rem',
   googleFonts: [
     {

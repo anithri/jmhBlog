@@ -9,8 +9,6 @@ import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const Gallery = ({ className, items}) => {
-  console.log('Gallery')
-  console.info(items)
   return (
     <ImageGallery
       items={items}
