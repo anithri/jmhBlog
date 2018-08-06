@@ -32,7 +32,9 @@ body {
   background-color: var(--base-background-color);
   background-image: var(--body-background-texture);
   background-repeat: repeat;
-
+  width: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
 }
 
 .quote {

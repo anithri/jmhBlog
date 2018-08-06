@@ -6,11 +6,7 @@ export const imageContainer = (image) => {
 export const imageShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  sizes: PropTypes.shape({
-    aspectRatio: PropTypes.number.isRequired,
-    base64: PropTypes.string.isRequired,
-    sizes: PropTypes.string.isRequired,
-    srcSet: PropTypes.string.isRequired,
+  resize: PropTypes.shape({
     src: PropTypes.string.isRequired,
   })
 })

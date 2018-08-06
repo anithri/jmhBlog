@@ -1,4 +1,6 @@
 .exhibit {
+  max-width: 100%;
+  width: 100%;
   & .carousel .slide {
     background-color: var(--transparent); /* .bg-transparent */
   }

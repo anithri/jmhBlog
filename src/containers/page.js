@@ -1,6 +1,6 @@
 import 'react'
 import PropTypes from 'prop-types'
-import {imageContainer, imageShape} from './image'
+import { imageContainer, imageShape } from './image'
 
 export const pageShape = PropTypes.shape({
   body: PropTypes.string,
@@ -13,13 +13,13 @@ export const pageShape = PropTypes.shape({
 export const contentfulPageShape = PropTypes.shape({
   body: {
     childMarkdownRemark: {
-      html: PropTypes.string.isRequired
-    }
+      html: PropTypes.string.isRequired,
+    },
   },
   slug: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(imageShape)
+  images: PropTypes.arrayOf(imageShape),
 })
 
 const pageContainer = (page) => {
@@ -28,7 +28,7 @@ const pageContainer = (page) => {
   return {
     ...page,
     body,
-    images
+    images,
   }
 }
 
@@ -42,8 +42,11 @@ export const commonPageFragment = graphql`
     images {
       title
       description
-      sizes(maxWidth: 1280) {
-        ...GatsbyContentfulSizes_noBase64
+      resize(width: 640, height: 640, resizingBehavior: PAD) {
+        src
+        width
+        height
+        aspectRatio
       }
     }
     slug
@@ -51,6 +54,5 @@ export const commonPageFragment = graphql`
     title
   }
 `
-
 
 export default pageContainer

@@ -17,23 +17,25 @@ const Article = ({ children, className, subject }) => {
   if (dateStamp) {
     timeHeader = <time dateTime={dateStamp.format()}>{publishDate}</time>
   }
-  return [
-    <aside key="articleExhibit" className={"fadeOut"}>
-      <Exhibit
-        key="ArticleExhibit"
-        images={images}
-        className={'articleExhibit'}
-      />
-    </aside>,
-    <article key="Article" className={`${className} article`}>
-      <header>
-        <h2>{title}</h2>
-        {timeHeader}
-      </header>
-      <section dangerouslySetInnerHTML={{ __html: body }} />
-      {children}
-    </article>,
-  ]
+  return (
+    <main className='mainArticle'>
+      <aside key="articleExhibit" className={'fadeOut'}>
+        <Exhibit
+          key="ArticleExhibit"
+          images={images}
+          className={'articleExhibit'}
+        />
+      </aside>
+      <article key="Article" className={`${className} article`}>
+        <header>
+          <h2>{title}</h2>
+          {timeHeader}
+        </header>
+        <section dangerouslySetInnerHTML={{ __html: body }} />
+        {children}
+      </article>
+    </main>
+  )
 }
 
 Article.propTypes = {
