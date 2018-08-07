@@ -1,5 +1,5 @@
 .featuredImage {
-  & img {
+  & > img {
     position: relative;
     z-index: -1;
     display: block;
@@ -14,6 +14,9 @@
       background-color: var(--white-10);
       color: var(--near-black);
     }
+  }
+  & .gatsby-image-outer-wrapper {
+    display: block;
   }
 }
 
@@ -38,3 +41,14 @@
   filter: opacity(100%);
   z-index: 30;
 }
+
+.gatsby-image-outer-wrapper {
+  display: flex;
+  justify-content: center; /* .justify-center */
+  align-items: center;
+  & > * {
+    flex: 0 0 auto;
+  }
+}
+
+

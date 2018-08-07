@@ -56,9 +56,15 @@ export const commonPostFragment = graphql`
     images {
       title
       description
-      sizes(maxWidth: 1280) {
-        ...GatsbyContentfulSizes_noBase64
-      }
+        resolutions(
+            width: 640,
+            height: 640,
+            resizingBehavior: PAD,
+            toFormat: PNG,
+            background: "transparent"
+        ) {
+            ...GatsbyContentfulResolutions_noBase64
+        }
     }
     publishOn
     slug

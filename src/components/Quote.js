@@ -8,7 +8,7 @@ const Quote = ({children, className, subject }) => {
   const {body, images} = subject
   let image
   if (images) {
-    image = (<Img sizes={images[0].sizes} alt={images[0].title} />)
+    image = (<Img resolutions={images[0].resolutions} alt={images[0].title} />)
   }
   return (
     <article className={`quote ${className}`}>

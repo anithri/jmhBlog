@@ -7,7 +7,7 @@ import pageContainer, {contentfulPageShape} from '../../containers/page';
 const PageGallery = ({ data: { contentfulPage } }) => {
   const page = pageContainer(contentfulPage)
   return (
-    <main className={`pageGallery ${page.theme} ${page.slug}Page`}>
+    <main className={`mainGallery ${page.theme} ${page.slug}Page`}>
       <Exhibit images={page.images}/>
       <Helmet title={page.title} />
     </main>

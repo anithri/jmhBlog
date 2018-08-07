@@ -25,7 +25,7 @@ page background 193,226,247
 :root {
   --font-size-base: 1.25rem;
 
-  --page-width: 40rem;
+  --page-width: 800px;
 
   --breakpoint-small: 'screen and (max-width: 640px)';
   --base-color: #b4aa7a;

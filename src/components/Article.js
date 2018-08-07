@@ -11,29 +11,31 @@ const Article = ({ children, className, subject }) => {
   let timeHeader, imageTags
 
   if (images.length > 0) {
-    imageTags = <Img sizes={images[0].sizes} alt={images[0].title} />
+    imageTags = <Img resulutions={images[0].resulutions} title={images[0].title} alt={images[0].title} />
   }
 
   if (dateStamp) {
     timeHeader = <time dateTime={dateStamp.format()}>{publishDate}</time>
   }
-  return [
-    <aside key="articleExhibit" className={"fadeOut"}>
-      <Exhibit
-        key="ArticleExhibit"
-        images={images}
-        className={'articleExhibit'}
-      />
-    </aside>,
-    <article key="Article" className={`${className} article`}>
-      <header>
-        <h2>{title}</h2>
-        {timeHeader}
-      </header>
-      <section dangerouslySetInnerHTML={{ __html: body }} />
-      {children}
-    </article>,
-  ]
+  return (
+    <main className='mainArticle'>
+      <aside key="articleExhibit" className={'fadeOut'}>
+        <Exhibit
+          key="ArticleExhibit"
+          images={images}
+          className={'articleExhibit'}
+        />
+      </aside>
+      <article key="Article" className={`${className} article`}>
+        <header>
+          <h2>{title}</h2>
+          {timeHeader}
+        </header>
+        <section dangerouslySetInnerHTML={{ __html: body }} />
+        {children}
+      </article>
+    </main>
+  )
 }
 
 Article.propTypes = {
