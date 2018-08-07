@@ -56,7 +56,7 @@ export const commonPostFragment = graphql`
     images {
       title
       description
-      sizes(maxWidth: 1280) {
+      sizes(maxWidth: 800) {
         ...GatsbyContentfulSizes_noBase64
       }
     }

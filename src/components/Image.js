@@ -5,7 +5,7 @@ const Image = props => {
   const { className, sizes, title, description } = props
   return (
     <figure className={`${className} imageFigure`}>
-      <Img sizes={sizes} alt={title} />
+      <Img sizes={sizes} alt={title} className={'image'}/>
       <figcaption>{title}</figcaption>
     </figure>
   )

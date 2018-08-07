@@ -42,11 +42,8 @@ export const commonPageFragment = graphql`
     images {
       title
       description
-      resize(width: 640, height: 640, resizingBehavior: PAD) {
-        src
-        width
-        height
-        aspectRatio
+      resolutions(width: 800,height: 600) {
+        ...GatsbyContentfulResolutions_noBase64
       }
     }
     slug

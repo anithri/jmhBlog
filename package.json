@@ -18,7 +18,7 @@
     "npm": "^6.3.0",
     "prop-types": "^15.6.1",
     "react-helmet": "^5.2.0",
-    "react-image-gallery": "^0.8.8",
+    "react-image-gallery": "^0.8.10",
     "typography-theme-lincoln": "^0.15.11",
     "uuid": "^3.2.1"
   },
