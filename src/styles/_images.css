@@ -15,6 +15,9 @@
       color: var(--near-black);
     }
   }
+  & .gatsby-image-outer-wrapper {
+    display: block;
+  }
 }
 
 .wrapper {
@@ -47,3 +50,5 @@
     flex: 0 0 auto;
   }
 }
+
+

@@ -53,7 +53,6 @@ export const commonPageFragment = graphql`
               background: "transparent"
           ) {
               ...GatsbyContentfulResolutions_noBase64
-              
           }
       }
   }

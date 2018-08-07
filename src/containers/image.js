@@ -8,8 +8,5 @@ export const imageContainer = image => {
 export const imageShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  resolutions: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    srcSet: PropTypes.string.isRequired,
-  }),
+  resolutions: PropTypes.shape,
 })

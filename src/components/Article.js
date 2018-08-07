@@ -11,7 +11,7 @@ const Article = ({ children, className, subject }) => {
   let timeHeader, imageTags
 
   if (images.length > 0) {
-    imageTags = <Img sizes={images[0].sizes} alt={images[0].title} />
+    imageTags = <Img resulutions={images[0].resulutions} title={images[0].title} alt={images[0].title} />
   }
 
   if (dateStamp) {
