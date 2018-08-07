@@ -22,7 +22,7 @@ export const contentfulPageShape = PropTypes.shape({
   images: PropTypes.arrayOf(imageShape),
 })
 
-const pageContainer = (page) => {
+const pageContainer = page => {
   const images = page.images ? page.images.map(i => imageContainer(i)) : []
   const body = page.body.childMarkdownRemark.html
   return {
@@ -34,21 +34,28 @@ const pageContainer = (page) => {
 
 export const commonPageFragment = graphql`
   fragment commonPageFragment on ContentfulPage {
-    body {
-      childMarkdownRemark {
-        html
-      }
-    }
-    images {
+      slug
+      theme
       title
-      description
-      resolutions(width: 800,height: 600) {
-        ...GatsbyContentfulResolutions_noBase64
+      body {
+          childMarkdownRemark {
+              html
+          }
       }
-    }
-    slug
-    theme
-    title
+      images {
+          title
+          description
+          resolutions(
+              width: 640,
+              height: 640,
+              resizingBehavior: PAD,
+              toFormat: PNG,
+              background: "transparent"
+          ) {
+              ...GatsbyContentfulResolutions_noBase64
+              
+          }
+      }
   }
 `
 

@@ -2,7 +2,7 @@
   max-width: 100%;
   width: var(--page-width);
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 800px;
   grid-template-rows: 1fr;
   & img {
     max-height: 100%;

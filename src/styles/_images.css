@@ -38,3 +38,12 @@
   filter: opacity(100%);
   z-index: 30;
 }
+
+.gatsby-image-outer-wrapper {
+  display: flex;
+  justify-content: center; /* .justify-center */
+  align-items: center;
+  & > * {
+    flex: 0 0 auto;
+  }
+}
